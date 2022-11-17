@@ -15,7 +15,11 @@ if TELEGRAM_SUPPORT_CHAT_ID is None or not str(TELEGRAM_SUPPORT_CHAT_ID).lstrip(
 TELEGRAM_SUPPORT_CHAT_ID = int(TELEGRAM_SUPPORT_CHAT_ID)
 
 
-WELCOME_MESSAGE = os.getenv("WELCOME_MESSAGE", "Здравствуйте! Напишите ваш вопрос и мы ответим на него в течение "
-                                               "рабочего дня")
+WELCOME_MESSAGE = os.getenv("WELCOME_MESSAGE", """Здравствуйте! Напишите ваш вопрос и мы ответим на него в течение 
+рабочего дня  Если ваша организация является клиентом Академии Торговли для регистрации обращения напишите его по 
+следующему шаблону: 1. Наименование вашей организации 2. Ваше Имя и контактный номер для связи 3. Текст вашего 
+обращения 
+
+После отправки сообщения с вами свяжется менеджер или специалист для решения вашего вопроса""")
 REPLY_TO_THIS_MESSAGE = os.getenv("REPLY_TO_THIS_MESSAGE", "REPLY_TO_THIS")
 WRONG_REPLY = os.getenv("WRONG_REPLY", "WRONG_REPLY")
